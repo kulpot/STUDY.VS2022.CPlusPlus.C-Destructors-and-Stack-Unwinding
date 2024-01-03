@@ -15,7 +15,12 @@ struct Car
 
 void main()
 {
-	Car car;
+	//Car car;
+	Car car1;
+	{
+		Car car2;
+	}
+	Car car3;
 }
 
 
