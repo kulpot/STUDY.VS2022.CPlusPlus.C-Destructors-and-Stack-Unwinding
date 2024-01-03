@@ -9,13 +9,13 @@ using std::string;
 
 struct Car
 {
-	Car() { cout << "Car()" << endl; }
-	~Car() { cout << "~Car()" << endl; }
+	Car() { cout << "Car()" << endl; }		// constructor
+	~Car() { cout << "~Car()" << endl; }	// destructor
 };
 
 void main()
 {
-
+	Car car;
 }
 
 
