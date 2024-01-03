@@ -4,50 +4,85 @@ using std::cout;
 using std::endl;
 using std::string;
 
+// ------------------------------------- C++ Destructors and Stack Unwinding -----------------------------------
+//ref link:https://www.youtube.com/watch?v=ljbXUQzaJBM&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ---------------------------- C++ Initializing Larger Data Members -------------------------------
 //ref link:https://www.youtube.com/watch?v=8_4s67wbMdc&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=8
 
-class Heart
-{
-	int numBeatsLeft;
-public:
-	//Heart()		// parameterless constructor with no arg
-	//{
-	//	cout << "Heart()" << endl;
-	//	numBeatsLeft = 0;
-	//}
-	//Heart(int numBeats)		// parameterize constructor with arg
-	//{
-	//	cout << "Heart(" << numBeats << ")" << endl;
-	//	numBeatsLeft = numBeats;
-	//}
-
-	Heart(int numBeats = 0)		// combined constructor of Heart() and Heart(int numBeats)
-	{
-		cout << "Heart(" << numBeats << ")" << endl;
-		numBeatsLeft = numBeats;
-	}
-};
-
-class Cat
-{
-	Heart heart;		// datamember
-	string name;
-public:
-	//Cat()
-	//Cat() : heart(12345)	//Initializing list datamember(heart)	//output: Heart(12345) Cat()
-	Cat() : heart(12345), name("Bruff") // avoids double initializing issues
-	{
-		cout << "Cat()" << endl;
-		//heart = Heart(12345);			//output: Heart() Cat() Heart(12345) 
-		name = "Bruff";	// double initialize issue
-	}
-};
-
-int main()
-{
-	Cat bruff;
-}
+//class Heart
+//{
+//	int numBeatsLeft;
+//public:
+//	//Heart()		// parameterless constructor with no arg
+//	//{
+//	//	cout << "Heart()" << endl;
+//	//	numBeatsLeft = 0;
+//	//}
+//	//Heart(int numBeats)		// parameterize constructor with arg
+//	//{
+//	//	cout << "Heart(" << numBeats << ")" << endl;
+//	//	numBeatsLeft = numBeats;
+//	//}
+//
+//	Heart(int numBeats = 0)		// combined constructor of Heart() and Heart(int numBeats)
+//	{
+//		cout << "Heart(" << numBeats << ")" << endl;
+//		numBeatsLeft = numBeats;
+//	}
+//};
+//
+//class Cat
+//{
+//	Heart heart;		// datamember
+//	string name;
+//public:
+//	//Cat()
+//	//Cat() : heart(12345)	//Initializing list datamember(heart)	//output: Heart(12345) Cat()
+//	Cat() : heart(12345), name("Bruff") // avoids double initializing issues
+//	{
+//		cout << "Cat()" << endl;
+//		//heart = Heart(12345);			//output: Heart() Cat() Heart(12345) 
+//		name = "Bruff";	// double initialize issue
+//	}
+//};
+//
+//int main()
+//{
+//	Cat bruff;
+//}
 
 
 
