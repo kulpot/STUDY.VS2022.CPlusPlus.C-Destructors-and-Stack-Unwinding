@@ -8,14 +8,14 @@ using std::string;
 //ref link:https://www.youtube.com/watch?v=ljbXUQzaJBM&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=10
 
 struct Car
-{
+{	// ----Track number of instances you have of a certain type-----
 	static int count;	// count - static variable			    //output://Car(1)
 	int id;		// id - instance variable								 //Car(2)
 	Car() { id = count++; cout << "Car(" << id << ")" << endl; }		 //~Car(2)
 	~Car() { cout << "~Car(" << id << ")" << endl; }					 //Car(3)
 																		 //~Car(3)
 																		 //~Car(1)
-
+	// ----Track number of instances you have of a certain type-----END
 
 	//static int count;													 
 	//Car() { cout << "Car()" << endl; }		// constructor
