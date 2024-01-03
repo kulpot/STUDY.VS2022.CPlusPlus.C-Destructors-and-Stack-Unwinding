@@ -10,7 +10,7 @@ using std::string;
 struct Car
 {
 	Car() { cout << "Car()" << endl; }		// constructor
-	~Car() { cout << "~Car()" << endl; }	// destructor
+	~Car() { cout << "~Car()" << endl; }	// deconstructor
 };
 
 void main()
