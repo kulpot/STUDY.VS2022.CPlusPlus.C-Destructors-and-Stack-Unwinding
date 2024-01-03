@@ -16,12 +16,12 @@ struct Car
 void main()
 {
 	//Car car;
-	Car car1;
-	{
-		Car car2;
-	}
-	Car car3;
-}
+	Car car1;	//Car(), ~ Car()						//output://Car() car1
+	{															 //Car() car2
+		Car car2;	//Car()	, //~Car()							 //~Car() car2 scope{}
+	}															 //Car() car3
+	Car car3;	//Car()	, //~Car()								 //~Car() car1 scope{}
+}																 //~Car() car3 scope{}
 
 
 
