@@ -9,16 +9,24 @@ using std::string;
 
 struct Car
 {
-	static int count;	// count - static variable
-	int id;		// id - instance variable
-	Car() { id = count++; cout << "Car()" << endl; }
-	~Car() { cout << "~Car()" << endl; }
-	
+	static int count;	// count - static variable			    //output://Car(1)
+	int id;		// id - instance variable								 //Car(2)
+	Car() { id = count++; cout << "Car(" << id << ")" << endl; }		 //~Car(2)
+	~Car() { cout << "~Car(" << id << ")" << endl; }					 //Car(3)
+																		 //~Car(3)
+																		 //~Car(1)
+
+
+	//static int count;													 
 	//Car() { cout << "Car()" << endl; }		// constructor
 	//~Car() { cout << "~Car()" << endl; }	// deconstructor
+
+
+
+
 };
 
-int Car::count = 0;
+int Car::count = 1;
 
 void main()
 {
@@ -29,8 +37,8 @@ void main()
 	{															 //Car() car2
 		Car car2;	//Car()	, //~Car()							 //~Car() car2 scope{}
 	}															 //Car() car3
-	Car car3;	//Car()	, //~Car()								 //~Car() car1 scope{}
-}																 //~Car() car3 scope{}
+	Car car3;	//Car()	, //~Car()								 //~Car() car3 scope{}
+}																 //~Car() car1 scope{}
 
 
 
