@@ -7,7 +7,16 @@ using std::string;
 // ------------------------------------- C++ Destructors and Stack Unwinding -----------------------------------
 //ref link:https://www.youtube.com/watch?v=ljbXUQzaJBM&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=10
 
+struct Car
+{
+	Car() { cout << "Car()" << endl; }
+	~Car() { cout << "~Car()" << endl; }
+};
 
+void main()
+{
+
+}
 
 
 
